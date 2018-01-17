@@ -11,6 +11,8 @@
    + [Python3.X安装forCentos](dev/python/Python3.X安装forCentos.md)
  - [shell](dev/shell/README.md)
    + [批量复制并过滤指定文件](dev/shell/cp_file.md)
+* [备用](stand-by/README.md)
+  - [Markdown语法](stand-by/Markdown语法.md)
 * [结束](end/README.md)
 
 
