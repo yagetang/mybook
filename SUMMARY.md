@@ -12,6 +12,7 @@
    + [Python3.X安装forCentos](dev/python/Python3.X安装forCentos.md)
 
  - [shell](dev/shell/README.md)
+   + [批量复制并过滤指定文件](dev/shell/cp_file.sh)
 * [结束](end/README.md)
 
 
