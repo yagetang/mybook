@@ -1,10 +1,10 @@
-Centos下elasticsearch集群搭建
+# Centos下elasticsearch集群搭建
 
 操作系统环境: CentOS release 6.9 (Final)
 
 elasticsearch ： elasticsearch-2.4.0
 
-集群搭建方式： 一个集群3个节点
+### 集群搭建方式： 一个集群3个节点
 
 elasticsearch-node01 192.168.1.54
 
@@ -12,7 +12,7 @@ elasticsearch-node01 192.168.1.55
 
 elasticsearch-node01 192.168.1.56
 
-必备环境:  java运行环境
+### 必备环境:  java运行环境
 
 1. JDK安装
 
