@@ -1,3 +1,4 @@
-# My Awesome Book
+# yagetang 的操作记录
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+对于一个小小的运维人员，记录日常的操作再为不过的事了，所有信息内容来源于网络，如有侵权请联系删除,谢谢！！！联系邮箱：email:yagetang@163.com
+主要涉及内容：数据库，运维自动化，运维工具等以及作为运维人员该拥有态度。
