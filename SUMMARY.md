@@ -14,6 +14,7 @@
 * [备用](stand-by/README.md)
   - [Markdown语法](stand-by/Markdown语法.md)
   - [运维mac下终端ssh简单配置](stand-by/运维mac下终端ssh简单配置.md)
+  - [linux下nc命令传输文件](stand-by/linux下nc命令传输文件.md)
 * [结束](end/README.md)
 
 
