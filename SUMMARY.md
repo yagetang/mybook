@@ -13,6 +13,7 @@
    + [批量复制并过滤指定文件](dev/shell/cp_file.md)
 * [备用](stand-by/README.md)
   - [Markdown语法](stand-by/Markdown语法.md)
+  - [运维mac下终端ssh简单配置](stand-by/运维mac下终端ssh简单配置.md)
 * [结束](end/README.md)
 
 
