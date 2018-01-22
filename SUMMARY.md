@@ -8,7 +8,7 @@
  - [Centos下elasticsearch集群搭建](ops/Centos下elasticsearch集群搭建.md)
 * [开发](dev/README.md)
  - [python](dev/python/README.md)
-   + [Python3.X安装forCentos](dev/python/Python3.X安装forCentos.md)
+   + [Centos下源码安装Python3.X](dev/python/Centos下源码安装Python3.X.md)
  - [shell](dev/shell/README.md)
    + [批量复制并过滤指定文件](dev/shell/cp_file.md)
 * [备用](stand-by/README.md)

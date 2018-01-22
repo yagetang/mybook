@@ -1,8 +1,8 @@
-# Python3.X 安装 for Centos
+# Centos下源码安装Python3.X
 
 1. yum -y install openssl*  gcc-c++
 
-(pip依赖ssl环境) 
+(pip依赖ssl环境)
 
 2. 编译安装python3
 
@@ -12,22 +12,22 @@
 1 tar -zxvf  Python-3.6.3.tgz
 2 cd Python-3.6.3
 3 ./configure
-4 make && make install 
+4 make && make install
 ```
 
 3. 配置python3与pip3
 
 ```Shell
-# ln -s /usr/local/bin/python3.6 /usr/bin/python3  
-# python3 -V 
+# ln -s /usr/local/bin/python3.6 /usr/bin/python3
+# python3 -V
 Python 3.6.3
 
 # ln -s /usr/local/bin/pip3 /usr/bin/pip3
 # pip3 list --format=columns
 Package    Version
 ---------- -------
-pip        8.1.1  
-setuptools 28.8.0 
+pip        8.1.1
+setuptools 28.8.0
 ## pip指定国内aliyun源
 # vim ~/.pip/pip.conf #如果没这文件则创建
 [global]
@@ -42,7 +42,7 @@ index-url=http://mirrors.aliyun.com/pypi/simple/
 # pip3 install pymysql
 Collecting pymysql
   Downloading http://mirrors.aliyun.com/pypi/packages/e5/07/c0f249aa0b7b0517b5843eeab689b9ccc6a6bb0536fc9d95e65901e6f2ac/PyMySQL-0.8.0-py2.py3-none-any.whl (83kB)
-    100% |████████████████████████████████| 92kB 2.8MB/s 
+    100% |████████████████████████████████| 92kB 2.8MB/s
 Installing collected packages: pymysql
 Successfully installed pymysql-0.8.0
 You are using pip version 8.1.1, however version 9.0.1 is available.
@@ -59,7 +59,7 @@ You should consider upgrading via the 'pip install --upgrade pip' command.
  1 # pip3 install --upgrade pip
  2 Collecting pip
  3   Downloading pip-9.0.1-py2.py3-none-any.whl (1.3MB)
- 4     100% |████████████████████████████████| 1.3MB 3.2kB/s 
+ 4     100% |████████████████████████████████| 1.3MB 3.2kB/s
  5 Installing collected packages: pip
  6   Found existing installation: pip 8.1.1
  7     Uninstalling pip-8.1.1:
@@ -77,7 +77,7 @@ PS:
 
 如果使用pip3安装插件的时候提示:
 
-pip is configured with locations that require TLS/SSL, however the ssl module in Python is not available. 
+pip is configured with locations that require TLS/SSL, however the ssl module in Python is not available.
 
 是因为系统缺少openssl-devel包
 
