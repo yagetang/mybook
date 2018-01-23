@@ -6,7 +6,7 @@
 
 2. 编译安装python3
 
-下载地址:[https://www.python.org/ftp/python/](https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tgz)
+下载地址:[https://www.python.org/ftp/python](https://www.python.org/ftp/python/)
 
 ```Shell
 1 tar -zxvf  Python-3.6.3.tgz
