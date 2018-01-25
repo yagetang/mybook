@@ -17,6 +17,7 @@
   - [linux下nc命令传输文件](stand-by/linux下nc命令传输文件.md)
   - [用Python快速实现HTTP和FTP服务器](stand-by/用Python快速实现HTTP和FTP服务器.md)
   - [windows开启多个企业微信](stand-by/windows开启多个企业微信.md)
+  - [Centos下安装GitLab社区版搭建](stand-by/Centos下安装GitLab社区版搭建.md)
 * [结束](end/README.md)
 
 
