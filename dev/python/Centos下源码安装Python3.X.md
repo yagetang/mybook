@@ -1,6 +1,6 @@
 # Centos下源码安装Python3.X
 
-1. yum -y install openssl*  gcc-c++
+1. yum -y install openssl* zlib*  gcc-c++
 
 (pip依赖ssl环境)
 
