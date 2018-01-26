@@ -1,9 +1,10 @@
 # Centos下源码安装Python3.X
 
-1. yum -y install openssl* zlib*  gcc-c++
-
+1. 依赖安装
 (pip依赖ssl环境)
-
+```Shell
+# yum -y install openssl* zlib*  gcc-c++
+```
 2. 编译安装python3
 
 下载地址:[https://www.python.org/ftp/python](https://www.python.org/ftp/python/)
