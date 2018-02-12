@@ -9,6 +9,7 @@
 * [开发](dev/README.md)
  - [python](dev/python/README.md)
    + [Centos下源码安装Python3.X](dev/python/Centos下源码安装Python3.X.md)
+   + [Python3命名规范](dev/python/Python3命名规范.md)
  - [shell](dev/shell/README.md)
    + [批量复制并过滤指定文件](dev/shell/cp_file.md)
 * [学习](stand-by/README.md)
