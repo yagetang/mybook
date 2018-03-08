@@ -11,6 +11,8 @@
  - [python](dev/python/README.md)
    + [Centos下源码安装Python3.X](dev/python/Centos下源码安装Python3.X.md)
    + [Python3命名规范](dev/python/Python3命名规范.md)
+   + [virtualenv环境](dev/python/virtualenv环境.md)
+   + [python3.6连接Mysql数据库及简单的增删改查操作](dev/python/python3.6连接Mysql数据库及简单的增删改查操作.md)
  - [shell](dev/shell/README.md)
    + [批量复制并过滤指定文件](dev/shell/cp_file.md)
 * [学习](stand-by/README.md)
