@@ -3,6 +3,7 @@
 * [简介](README.md)
 * [数据库](db/README.md)
  - [Centos下yum安装Mariadb](db/Centos下yum安装Mariadb.md)
+ - [MySQL的Grant命令](db/MySQL的Grant命令.md)
 * [中间件](ops/README.md)
  - [Centos下Haproxy高可用搭建](ops/Centos下Haproxy高可用搭建.md)
  - [Centos下elasticsearch集群搭建](ops/Centos下elasticsearch集群搭建.md)
