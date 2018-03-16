@@ -144,9 +144,8 @@ revoke all on *.* from dba@localhost;
 
 八、MySQL grant、revoke 用户权限注意事项
 
-\1. grant, revoke 用户权限后，该用户只有重新连接 MySQL 数据库，权限才能生效。
-
-\2. 如果想让授权的用户，也可以将这些权限 grant 给其他用户，需要选项 “grant option“
+1. grant, revoke 用户权限后，该用户只有重新连接 MySQL 数据库，权限才能生效。
+2. 如果想让授权的用户，也可以将这些权限 grant 给其他用户，需要选项 “grant option“
 
 ```mysql
 grant select on testdb.* to dba@localhost with grant option;
