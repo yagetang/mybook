@@ -9,6 +9,7 @@
  - [Centos下elasticsearch集群搭建](ops/Centos下elasticsearch集群搭建.md)
  - [Centos下PowerDNS搭建](ops/Centos下PowerDNS搭建.md)
  - [Centos下Centos下RabbbitMQ安装](ops/Centos下RabbbitMQ安装.md)
+ - [Centos下zookeeper集群搭建](ops/Centos下zookeeper集群搭建.md)
 * [开发](dev/README.md)
  - [python](dev/python/README.md)
    + [Centos下源码安装Python3.X](dev/python/Centos下源码安装Python3.X.md)
