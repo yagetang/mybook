@@ -94,7 +94,7 @@ GeoIP数据包
 > # yum -y install GeoIP GeoIP-devel perl-Geo-IP
 > ```
 
-**F、lua支持依赖安装(<http://luajit.org/download.html>) **
+**F、lua支持依赖安装(<http://luajit.org/download.html>)**
 
 > ``` shell
 > # wget http://luajit.org/download/LuaJIT-2.0.5.tar.gz
