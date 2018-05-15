@@ -170,170 +170,170 @@ GeoIP数据包
 
 编辑启动文件添加下面内容
 
-```shell
-# vim /etc/rc.d/init.d/nginx 
-#!/bin/bash
-# nginx Startup script for the Nginx HTTP Server
-# it is v.0.0.1 version.
-# chkconfig: - 85 15
-# description: Nginx is a high-performance web and proxy server.
-#       It has a lot of features, but it's not for everyone.
-# processname: nginx
-# pidfile: /var/run/nginx.pid
-# config: /etc/nginx/nginx.conf
-
-#Load Nginx Env
-if [[ -f /etc/profile.d/sys_env.sh ]] ; then
-    source /etc/profile.d/sys_env.sh
-else
-    echo "error:sys_env.sh file not exist." >> /var/log/nginx/error.log
-    exit
-fi
-
-nginxd=/usr/sbin/nginx
-nginx_config=/etc/nginx/nginx.conf
-nginx_pid=/var/run/nginx.pid
-RETVAL=0
-prog="nginx"
-# Source function library.
-. /etc/rc.d/init.d/functions
-# Source networking configuration.
-. /etc/sysconfig/network
-# Check that networking is up.
-[ "${NETWORKING}" = "no" ] && exit 0
-[ -x $nginxd ] || exit 0
-# Start nginx daemons functions.
-start() {
-if [ -e $nginx_pid ];then
-  echo "nginx already running...."
-  exit 1
-fi
-  echo -n $"Starting $prog: "
-  daemon $nginxd -c ${nginx_config}
-  RETVAL=$?
-  echo
-  [ $RETVAL = 0 ] && touch /var/run/nginx.lock
-  return $RETVAL
-}
-# Stop nginx daemons functions.
-stop() {
-    echo -n $"Stopping $prog: "
-    killproc $nginxd
-    RETVAL=$?
-    echo
-    [ $RETVAL = 0 ] && rm -f /var/run/nginx.lock /var/run/nginx.pid
-}
-# reload nginx service functions.
-reload() {
-  echo -n $"Reloading $prog: "
-  #kill -HUP `cat ${nginx_pid}`
-  killproc $nginxd -HUP
-  RETVAL=$?
-  echo
-}
-# See how we were called.
-case "$1" in
-start)
-    start
-    ;;
-stop)
-    stop
-    ;;
-reload)
-    reload
-    ;;
-restart)
-    stop
-    start
-    ;;
-status)
-    status $prog
-    RETVAL=$?
-    ;;
-*)
-    echo $"Usage: $prog {start|stop|restart|reload|status|help}"
-    exit 1
-esac
-exit $RETVAL
-
-# chmod u+x /etc/rc.d/init.d/nginx
-```
+> ```shell
+> # vim /etc/rc.d/init.d/nginx 
+> #!/bin/bash
+> # nginx Startup script for the Nginx HTTP Server
+> # it is v.0.0.1 version.
+> # chkconfig: - 85 15
+> # description: Nginx is a high-performance web and proxy server.
+> #       It has a lot of features, but it's not for everyone.
+> # processname: nginx
+> # pidfile: /var/run/nginx.pid
+> # config: /etc/nginx/nginx.conf
+> 
+> #Load Nginx Env
+> if [[ -f /etc/profile.d/sys_env.sh ]] ; then
+>     source /etc/profile.d/sys_env.sh
+> else
+>     echo "error:sys_env.sh file not exist." >> /var/log/nginx/error.log
+>     exit
+> fi
+> 
+> nginxd=/usr/sbin/nginx
+> nginx_config=/etc/nginx/nginx.conf
+> nginx_pid=/var/run/nginx.pid
+> RETVAL=0
+> prog="nginx"
+> # Source function library.
+> . /etc/rc.d/init.d/functions
+> # Source networking configuration.
+> . /etc/sysconfig/network
+> # Check that networking is up.
+> [ "${NETWORKING}" = "no" ] && exit 0
+> [ -x $nginxd ] || exit 0
+> # Start nginx daemons functions.
+> start() {
+> if [ -e $nginx_pid ];then
+>   echo "nginx already running...."
+>   exit 1
+> fi
+>   echo -n $"Starting $prog: "
+>   daemon $nginxd -c ${nginx_config}
+>   RETVAL=$?
+>   echo
+>   [ $RETVAL = 0 ] && touch /var/run/nginx.lock
+>   return $RETVAL
+> }
+> # Stop nginx daemons functions.
+> stop() {
+>     echo -n $"Stopping $prog: "
+>     killproc $nginxd
+>     RETVAL=$?
+>     echo
+>     [ $RETVAL = 0 ] && rm -f /var/run/nginx.lock /var/run/nginx.pid
+> }
+> # reload nginx service functions.
+> reload() {
+>   echo -n $"Reloading $prog: "
+>   #kill -HUP `cat ${nginx_pid}`
+>   killproc $nginxd -HUP
+>   RETVAL=$?
+>   echo
+> }
+> # See how we were called.
+> case "$1" in
+> start)
+>     start
+>     ;;
+> stop)
+>     stop
+>     ;;
+> reload)
+>     reload
+>     ;;
+> restart)
+>     stop
+>     start
+>     ;;
+> status)
+>     status $prog
+>     RETVAL=$?
+>     ;;
+> *)
+>     echo $"Usage: $prog {start|stop|restart|reload|status|help}"
+>     exit 1
+> esac
+> exit $RETVAL
+> 
+> # chmod u+x /etc/rc.d/init.d/nginx
+> ```
 
 保存退出 
 复制代码 代码如下:
 
-```shell
-# vim /usr/lib/systemd/system/nginx.service
-
-[Unit]
-Description=nginx - high performance web server
-After=network.target remote-fs.target nss-lookup.target
-
-[Service]
-Type=forking
-ExecStart=/etc/rc.d/init.d/nginx start 
-ExecReload=/etc/rc.d/init.d/nginx reload
-ExecStop=/etc/rc.d/init.d/nginx  stop
-
-[Install]
-WantedBy=multi-user.target
-```
+> ```shell
+> # vim /usr/lib/systemd/system/nginx.service
+> 
+> [Unit]
+> Description=nginx - high performance web server
+> After=network.target remote-fs.target nss-lookup.target
+> 
+> [Service]
+> Type=forking
+> ExecStart=/etc/rc.d/init.d/nginx start 
+> ExecReload=/etc/rc.d/init.d/nginx reload
+> ExecStop=/etc/rc.d/init.d/nginx  stop
+> 
+> [Install]
+> WantedBy=multi-user.target
+> ```
 
 
 
 #### 启动nginx服务
 
-```
-systemctl start nginx.service
-```
+> ```
+> systemctl start nginx.service
+> ```
 
 #### 设置开机自启动
 
-```
-systemctl enable nginx.service
-```
+> ```
+> systemctl enable nginx.service
+> ```
 
 #### 停止开机自启动
 
-```
-systemctl disable nginx.service
-```
+> ```
+> systemctl disable nginx.service
+> ```
 
 #### 查看服务当前状态
 
-```
-systemctl status nginx.service
-```
+> ```
+> systemctl status nginx.service
+> ```
 
 #### 重新启动服务
 
-```
-systemctl restart nginx.service
-```
+> ```
+> systemctl restart nginx.service
+> ```
 
 #### 查看所有已启动的服务
 
-```
-systemctl list-units --type=service
-```
+> ```
+> systemctl list-units --type=service
+> ```
 
 异常处理
 
-```Shell
-# nginx 
-nginx: error while loading shared libraries: libluajit-5.1.so.2: cannot open shared object file: No such file or directory
-
-# ln -s /usr/local/luajit/lib/libluajit-5.1.so.2.0.5 /lib/libluajit-5.1.so
-# ln -s /usr/local/luajit/lib/libluajit-5.1.so.2.0.5 /lib/libluajit-5.1.so.2 
-# ldconfig
-
-# nginx
-nginx: [emerg] mkdir() "/var/cache/nginx/client_temp" failed (2: No such file or directory)
-
-# /var/cache/nginx
-
-#安全
-# cd /etc/ssl/certs
-# openssl dhparam -out dhparam.pem 4096
-```
+> ```Shell
+> # nginx 
+> nginx: error while loading shared libraries: libluajit-5.1.so.2: cannot open shared object file: No such file or directory
+> 
+> # ln -s /usr/local/luajit/lib/libluajit-5.1.so.2.0.5 /lib/libluajit-5.1.so
+> # ln -s /usr/local/luajit/lib/libluajit-5.1.so.2.0.5 /lib/libluajit-5.1.so.2 
+> # ldconfig
+> 
+> # nginx
+> nginx: [emerg] mkdir() "/var/cache/nginx/client_temp" failed (2: No such file or directory)
+> 
+> # /var/cache/nginx
+> 
+> #安全
+> # cd /etc/ssl/certs
+> # openssl dhparam -out dhparam.pem 4096
+> ```
 
