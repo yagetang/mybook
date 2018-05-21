@@ -28,6 +28,7 @@
   - [windows开启多个企业微信](stand-by/windows开启多个企业微信.md)
   - [Centos下安装GitLab社区版搭建](stand-by/Centos下安装GitLab社区版搭建.md)
   - [GitLab启用HTTPS](stand-by/GitLab启用HTTPS.md)
+  - [SSH通过TUNNEL把本地开发环境公布到互联网上](stand-by/SSH通过TUNNEL把本地开发环境公布到互联网上.md)
 * [结束](end/README.md)
 
 
