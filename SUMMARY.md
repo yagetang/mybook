@@ -8,7 +8,7 @@
  - [Centos下Haproxy高可用搭建](ops/Centos下Haproxy高可用搭建.md)
  - [Centos下elasticsearch集群搭建](ops/Centos下elasticsearch集群搭建.md)
  - [Centos下PowerDNS搭建](ops/Centos下PowerDNS搭建.md)
- - [Centos下Centos下RabbbitMQ安装](ops/Centos下RabbbitMQ安装.md)
+ - [Centos下RabbbitMQ安装](ops/Centos下RabbbitMQ安装.md)
  - [Centos下zookeeper集群搭建](ops/Centos下zookeeper集群搭建.md)
  - [Tengine安装与配置](ops/Tengine安装与配置.md)
  - [Centos下Nginx简单安装](ops/Centos下Nginx简单安装.md)
@@ -29,6 +29,8 @@
   - [Centos下安装GitLab社区版搭建](stand-by/Centos下安装GitLab社区版搭建.md)
   - [GitLab启用HTTPS](stand-by/GitLab启用HTTPS.md)
   - [SSH通过TUNNEL把本地开发环境公布到互联网上](stand-by/SSH通过TUNNEL把本地开发环境公布到互联网上.md)
+  - [CentOS下OpenLDAP安装](stand-by/CentOS下OpenLDAP安装.md)
+  - [Centos下Docker运行Gitlab](stand-by/Centos下Docker运行Gitlab.md)
 * [结束](end/README.md)
 
 
