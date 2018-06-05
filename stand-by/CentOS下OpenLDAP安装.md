@@ -177,9 +177,9 @@ cn: user01
 sn: user01
 givenName: user01
 displayName: user01
-userPassword: {SSHA}8uaxZw+vnTtSwZO/dOBNZblT2ssm7bGr
+userPassword: {SSHA}生成的加密串
 employeeNumber: XXJS-001
-mobile: 19923352629
+mobile: 19912345678
 mail: user01@innosail.cn
 postalAddress: 400000
 
@@ -196,7 +196,7 @@ adding new entry "ou=Group,dc=innosail,dc=org"
 
 
 
-## 5.OpenLDAP 使用 SSL/TLS
+## 4.OpenLDAP 使用 SSL/TLS
 
 ``` shell
 [root@ldap-service ~]# openssl req -new -x509 -nodes -out /etc/openldap/certs/ldap.cert -keyout /etc/openldap/certs/ldap.key -days 3650
@@ -244,7 +244,7 @@ tcp6       0      0 :::389                  :::*                    LISTEN      
 
 
 
-## 6.开启日志
+## 5.开启日志
 
 默认情况下OpenLDAP是没有启用日志记录功能的，但是在实际使用过程中，我们为了定位问题需要使用到OpenLDAP日志。
 
