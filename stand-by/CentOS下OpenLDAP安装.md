@@ -274,7 +274,7 @@ modifying entry "cn=config"
 
 
 
-## 7.服务重启重启，防火墙开启
+## 6.服务重启重启，防火墙开启
 
 ```shell
 [root@ldap-service ~]# firewall-cmd --add-service=ldap --permanent 
@@ -285,7 +285,7 @@ success
 
 
 
-## 8.检查命令
+## 7.检查命令
 
 ```shell
 ##查看
