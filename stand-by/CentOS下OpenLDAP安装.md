@@ -196,7 +196,7 @@ adding new entry "ou=Group,dc=innosail,dc=org"
 
 
 
-## 4.OpenLDAP 使用 SSL/TLS
+## 4.OpenLDAP 使用 SSL/TLS （选择安装）
 
 ``` shell
 [root@ldap-service ~]# openssl req -new -x509 -nodes -out /etc/openldap/certs/ldap.cert -keyout /etc/openldap/certs/ldap.key -days 3650
@@ -273,7 +273,6 @@ modifying entry "cn=config"
 ```
 
 
-
 ## 6.服务重启重启，防火墙开启
 
 ```shell
@@ -282,7 +281,6 @@ success
 [root@ldap-service ~]# firewall-cmd --reload 
 success
 ```
-
 
 
 ## 7.检查命令
