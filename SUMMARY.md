@@ -31,6 +31,8 @@
   - [SSH通过TUNNEL把本地开发环境公布到互联网上](stand-by/SSH通过TUNNEL把本地开发环境公布到互联网上.md)
   - [CentOS下OpenLDAP安装](stand-by/CentOS下OpenLDAP安装.md)
   - [Centos下Docker运行Gitlab](stand-by/Centos下Docker运行Gitlab.md)
+  - [Tengine下nginx-auth-ldap认证](stand-by/Tengine下nginx-auth-ldap认证.md)
+  - [Docker安装Self-Service-Password](stand-by/Docker安装Self-Service-Password.md)
 * [结束](end/README.md)
 
 
