@@ -131,19 +131,7 @@ docker run --detach \
  --volume /srv/gitlab/data:/var/opt/gitlab \
  gitlab/gitlab-ce:latest
 
-docker run --detach \
- --hostname service-cyjf-git-web.0100101001.tang \
- --publish 10443:443 \
- --publish 10080:80 \
- --publish 10022:22 \
- --name service-cyjf-git-web.0100101001.tang \
- --restart always\
- --volume /srv/gitlab/config:/etc/gitlab \
- --volume /srv/gitlab/logs:/var/log/gitlab \
- --volume /srv/gitlab/data:/var/opt/gitlab \
- gitlab/gitlab-ce:latest
-
-docker run -i -t --hostname java-yagetang-demo-web.0100011001.tang --name java-yagetang-demo-web.0100011001.tang --restart always centos /bin/bash
+eg:docker run -i -t --hostname java-yagetang-demo-web.0100011001.tang --name java-yagetang-demo-web.0100011001.tang --restart always centos /bin/bash
 
 ```
 
