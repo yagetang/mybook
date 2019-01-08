@@ -46,6 +46,9 @@ $ sudo yum-config-manager \
     --add-repo \
     https://download.docker.com/linux/centos/docker-ce.repo
     
+#更新yum源
+$ sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+
 #启用稳定版
 $ yum-config-manager --enable docker-ce-edge
 
