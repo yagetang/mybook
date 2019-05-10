@@ -40,7 +40,7 @@
   - [Docker安装Self-Service-Password](stand-by/Docker安装Self-Service-Password.md)
   - [journalctl工具基础介绍](stand-by/os/journalctl工具基础介绍.md)
   - [使用curl命令模拟POST与GET请求](stand-by/os/使用curl命令模拟POST与GET请求.md)
-  - [运维mac下终端ssh简单配置](stand-by/os/运维mac下终端ssh简单配置.md)
+  - [Linux服务器下日志截取](stand-by/os/Linux服务器下日志截取.md)
 * [结束](end/README.md)
 
 
