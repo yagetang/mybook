@@ -38,6 +38,9 @@
   - [Centos下Docker运行Gitlab](stand-by/Centos下Docker运行Gitlab.md)
   - [Tengine下nginx-auth-ldap认证](stand-by/Tengine下nginx-auth-ldap认证.md)
   - [Docker安装Self-Service-Password](stand-by/Docker安装Self-Service-Password.md)
+  - []journalctl工具基础介绍(stand-by/os/journalctl工具基础介绍.md)
+  - [使用curl命令模拟POST与GET请求](stand-by/os/使用curl命令模拟POST与GET请求.md.md)
+  - [运维mac下终端ssh简单配置](stand-by/os/运维mac下终端ssh简单配置.md)
 * [结束](end/README.md)
 
 
