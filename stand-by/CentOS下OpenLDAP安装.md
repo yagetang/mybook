@@ -293,6 +293,14 @@ success
 ##删除用户
 [root@ldap-service ~]# ldapdelete -x -W -D 'cn=root,dc=innosail,dc=org' "uid=user01,ou=People,dc=innosail,dc=org"
 
+##用户自行修改密码
+
+ldappasswd -H ldap://Server_IP -x -D "uid=username,ou=People,dc=innosail,dc=org" -w OldPasswd -S            #回车后会提示输入新密码
+ldappasswd -H ldap://Server_IP -x -D "uid=username,ou=People,dc=innosail,dc=org" -w OldPasswd -s NewPasswd  #直接在命令里指定新密码
+
+##使用管理员修改普通用户的密码
+ldappasswd -H ldap://Server_IP -x -D "cn=root,dc=innosail,dc=org" -W "uid=username,ou=People,dc=innosail,dc=org" -S
+
 ```
 
 参考：
