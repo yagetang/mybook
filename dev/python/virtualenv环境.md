@@ -26,7 +26,7 @@ $ pip3 install virtualenv
 第二步，创建一个独立的Python运行环境，命名为`venv`：
 
 ```
-[work@test-server test-project]$  virtualenv --no-site-packages venv
+[work@test-server test-project]$  virtualenv -p /usr/bin/python3 --no-site-packages venv
 Using base prefix '/usr/local'
 New python executable in /data/yagetang/test-project/venv/bin/python3.6
 Also creating executable in /data/yagetang/test-project/venv/bin/python
@@ -38,7 +38,7 @@ done.
 drwxrwxr-x 5 work work 4096 3月   8 14:40 venv
 ```
 
-命令`virtualenv`就可以创建一个独立的Python运行环境，我们还加上了参数`--no-site-packages`，这样，已经安装到系统Python环境中的所有第三方包都不会复制过来，这样，我们就得到了一个不带任何第三方包的“干净”的Python运行环境。
+命令`virtualenv`就可以创建一个独立的Python运行环境，我们还加上了参数`--no-site-packages`，这样，已经安装到系统Python环境中的所有第三方包都不会复制过来，这样，我们就得到了一个不带任何第三方包的“干净”的Python运行环境，-p /usr/bin/python3 指定版本 。
 
 新建的Python环境被放到当前目录下的`venv`目录。有了`venv`这个Python环境，可以用`source`进入该环境：
 
