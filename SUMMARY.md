@@ -19,6 +19,7 @@
    + [Python3命名规范](dev/python/Python3命名规范.md)
    + [virtualenv环境](dev/python/virtualenv环境.md)
    + [python3.6连接Mysql数据库及简单的增删改查操作](dev/python/python3.6连接Mysql数据库及简单的增删改查操作.md)
+   + [使用python来操作redis用法详解](dev/python/使用python来操作redis用法详解.md)
  - [shell](dev/shell/README.md)
    + [批量复制并过滤指定文件](dev/shell/cp_file.md)
  - [java](dev/java/README.md)
