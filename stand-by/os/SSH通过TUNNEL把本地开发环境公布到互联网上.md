@@ -47,3 +47,24 @@ Accept-Ranges: bytes
 
 > 在上面这个例子里，7689 指的是公网服务器的端口，localhost 后面的 80 是本地电脑用的端口。root 是登录到公网服务器的用户，47.98.109.88 是公网服务器的 IP 地址。
 
+
+
+## 使用正向隧道搭建socket5服务
+
+```
+ssh -D 7000 work@121.51.1.1
+```
+
+但是为了让数据传输更加稳定，不会因为错误退出，以及压缩传输等，需要增加几个参数：
+
+```
+ssh -qTfnN -D 7000 root@202.102.1.1
+```
+
+| 参数 | 备注                                                         |      解释      |
+| :--- | ------------------------------------------------------------ | :------------: |
+| -q   | Quiet mode. Causes most warning and diagnostic messages to be suppressed. |    安静模式    |
+| -T   | Disable pseudo-tty allocation.                               |   不分配tty    |
+| -f   | Requests ssh to go to background just before command execution. |    后台运行    |
+| -n   | Redirects stdin from /dev/null                               |     不输出     |
+| -N   | Do not execute a remote command. This is useful for just forwarding ports | 不执行远程命令 |
