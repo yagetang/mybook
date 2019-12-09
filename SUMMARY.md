@@ -43,6 +43,7 @@
   - [journalctl工具基础介绍](stand-by/os/journalctl工具基础介绍.md)
   - [使用curl命令模拟POST与GET请求](stand-by/os/使用curl命令模拟POST与GET请求.md)
   - [Linux服务器下日志截取](stand-by/os/Linux服务器下日志截取.md)
+  - [linux利用nethogs查看某进程的网卡流量](stand-by/os/linux利用nethogs查看某进程的网卡流量.md)
 * [结束](end/README.md)
 
 
