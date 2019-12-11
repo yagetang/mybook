@@ -1,8 +1,8 @@
-# Tengine 安装与配置
+Tengine 安装与配置
 
 操作系统版本：CentOS Linux release 7.4.1708 (Core)
 
-Tengine版本：[Tengine-2.2.2](http://tengine.taobao.org/download/tengine-2.2.2.tar.gz) 
+Tengine版本：[Tengine-2.3.2](http://tengine.taobao.org/download/tengine-2.3.2.tar.gz) 
 
 Tengine版本选择：http://tengine.taobao.org/download_cn.html
 
@@ -124,7 +124,7 @@ GeoIP数据包
 接下来才是进行安装：
 
 > ``` shell
-> ./configure --prefix=/etc/nginx --sbin-path=/usr/sbin/nginx --dso-tool-path=/usr/sbin/ --includedir=/usr/include/nginx --conf-path=/etc/nginx/nginx.conf --error-log-path=/var/log/nginx/error.log --http-log-path=/var/log/nginx/access.log --pid-path=/var/run/nginx.pid --lock-path=/var/run/nginx.lock --http-client-body-temp-path=/var/cache/nginx/client_temp --http-proxy-temp-path=/var/cache/nginx/proxy_temp --http-fastcgi-temp-path=/var/cache/nginx/fastcgi_temp --http-uwsgi-temp-path=/var/cache/nginx/uwsgi_temp --http-scgi-temp-path=/var/cache/nginx/scgi_temp --user=nginx --group=nginx --with-http_v2_module --with-http_ssl_module --with-http_realip_module --with-http_addition_module --with-http_sub_module --with-http_dav_module --with-http_flv_module --with-http_mp4_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_random_index_module --with-http_secure_link_module --with-http_stub_status_module --with-http_auth_request_module --with-mail --with-mail_ssl_module --with-http_geoip_module --with-file-aio --with-http_sysguard_module --with-force-exit --with-http_concat_module --with-jemalloc --with-http_dyups_module --with-http_dyups_lua_api --with-pcre-jit --with-openssl=../openssl-1.1.0h --with-ld-opt=-Wl,-rpath,/usr/lib --add-module=../ngx_devel_kit-0.3.1rc1 --add-module=../lua-nginx-module-0.10.13 --add-module=../lua-upstream-nginx-module-0.07 --add-module=../echo-nginx-module-0.61
+> ./configure --prefix=/etc/nginx --sbin-path=/usr/sbin/nginx --conf-path=/etc/nginx/nginx.conf --error-log-path=/var/log/nginx/error.log --http-log-path=/var/log/nginx/access.log --pid-path=/var/run/nginx.pid --lock-path=/var/run/nginx.lock --http-client-body-temp-path=/var/cache/nginx/client_temp --http-proxy-temp-path=/var/cache/nginx/proxy_temp --http-fastcgi-temp-path=/var/cache/nginx/fastcgi_temp --http-uwsgi-temp-path=/var/cache/nginx/uwsgi_temp --http-scgi-temp-path=/var/cache/nginx/scgi_temp --user=nginx --group=nginx --with-http_v2_module --with-http_ssl_module --with-http_realip_module --with-http_addition_module --with-http_sub_module --with-http_dav_module --with-http_flv_module --with-http_mp4_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_random_index_module --with-http_secure_link_module --with-http_stub_status_module --with-http_auth_request_module --with-mail --with-mail_ssl_module --with-http_geoip_module --with-file-aio  --with-jemalloc --with-pcre-jit  --with-openssl=../openssl-1.1.0h --with-ld-opt=-Wl,-rpath,/usr/lib --add-module=../ngx_devel_kit-0.3.1rc1 --add-module=../lua-nginx-module-0.10.13 --add-module=../lua-upstream-nginx-module-0.07 --add-module=../echo-nginx-module-0.61 --add-module=../nginx-module-vts-0.1.18
 > 
 > # 模块
 > 
@@ -148,16 +148,21 @@ GeoIP数据包
 > --add-module=/path/to/lua-nginx-module-0.10.13  #nginx_lua_module 的源码路径
 > https://github.com/openresty/lua-nginx-module/tags
 > https://github.com/openresty/lua-nginx-module/archive/v0.10.13.tar.gz
-> 
 > --add-module=../ngx_devel_kit-0.3.1rc1 --add-module=../lua-nginx-module-0.10.13
 > 
 > echo 模块
 > https://github.com/openresty/echo-nginx-module
+> https://github.com/openresty/echo-nginx-module/archive/v0.61.tar.gz
 > --add-module=../echo-nginx-module-0.61
 > 
 > lua-upstream-nginx-module
 > https://github.com/openresty/lua-upstream-nginx-module/releases
 > --add-module=../lua-upstream-nginx-module-0.07
+> https://github.com/openresty/lua-upstream-nginx-module/archive/v0.07.tar.gz
+> 
+> nginx-module-vts
+> https://github.com/vozlt/nginx-module-vts/archive/v0.1.18.tar.gz
+> --add-module=../nginx-module-vts-0.1.18
 > ```
 
 
