@@ -13,6 +13,7 @@
  - [Centos下zookeeper集群搭建](ops/Centos下zookeeper集群搭建.md)
  - [Tengine安装与配置](ops/Tengine安装与配置.md)
  - [Centos下Nginx简单安装](ops/Centos下Nginx简单安装.md)
+ - [SaltStack基本操作](ops/SaltStack基本操作.md)
 * [开发](dev/README.md)
  - [python](dev/python/README.md)
    + [Centos下源码安装Python3.X](dev/python/Centos下源码安装Python3.X.md)
