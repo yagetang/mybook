@@ -8,9 +8,9 @@
 
 elasticsearch-node01 192.168.1.54
 
-elasticsearch-node01 192.168.1.55
+elasticsearch-node02 192.168.1.55
 
-elasticsearch-node01 192.168.1.56
+elasticsearch-node03 192.168.1.56
 
 **必备环境:  **java运行环境
 
@@ -111,3 +111,37 @@ Installed head into /usr/share/elasticsearch/plugins/head
 4. 访问：http://192.168.1.54:9200/_plugin/head/ 
 
    成功
+
+5. 其它
+```
+查看集群的健康状态。
+
+http://127.0.0.1:9200/_cat/health?v
+
+查看集群的索引数。
+http://127.0.0.1:9200/_cat/indices?v
+
+索引查看
+http://127.0.0.1:9200/_cat/indices?v
+
+查看集群所在磁盘的分配状况
+http://127.0.0.1:9200/_cat/allocation?v
+
+查看集群的节点
+http://127.0.0.1:9200/_cat/nodes?v
+
+eg:
+cluster.name: cluster-es
+node.name: es-node1
+path.data: /usr/local/elasticsearch/data
+path.logs: /usr/local/elasticsearch/logs
+network.host: 172.16.64.2
+http.port: 9200
+discovery.zen.minimum_master_nodes: 1
+discovery.zen.ping.unicast.hosts: ["172.16.64.2", "172.16.64.3", "172.16.64.4"]
+node.master: true
+node.data: false
+discovery.zen.fd.ping_timeout: 180s
+discovery.zen.fd.ping_retries: 10
+discovery.zen.fd.ping_interval: 30s
+```
